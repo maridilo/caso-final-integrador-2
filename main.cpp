@@ -20,8 +20,35 @@ ConsoleBox *console_box = new ConsoleBox;  // suponemos que ya se ha incicializa
 
 void load_script(const char* filename, bool show_script =false)
 {
-    f = fopen(filename, "rb");
-    if (!f)
+    string script;
+    FILE *f = nullptr;
+    try
     {
+        f = fopen(filename, "rb");
+        if (!f)
+        {
+            throw "Error al abrir el archivo";
+        }
+        fseek(f, 0, SEEK_END);
+        auto size = ftell(f);
+        fseek(f, 0, SEEK_SET);
+        script.resize(size);
+        fread(&script[0], 1, size, f);
+        fclose(f);
+        if (show_script)
+        {
+            console_box->new_text();
+            console_box->set_text(script);
+        }
+    }
+    catch (const char *error)
+    {
+        if (f)
+        {
+            fclose(f);
+        }
+        console_box->new_text();
+        console_box->set_text(error);
+    }
         return;
 }
