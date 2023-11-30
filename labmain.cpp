@@ -63,6 +63,7 @@ void load_script(const char* filename, bool show_script =false)
     // Cerrar el archivo
     void load_script();
     {
+        // Pedir el nombre del archivo
         char filename[256];
         printf("Archivo: ");
         scanf("%499s", filename);
