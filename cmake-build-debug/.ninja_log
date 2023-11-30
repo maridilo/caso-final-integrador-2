@@ -1,2 +1,7 @@
 # ninja log v5
 26	921	7230449837816827	CMakeFiles/caso_final_integrador_2.dir/main.cpp.obj	aed15805ac422f5c
+5	426	7230454835723036	build.ninja	deccc11631efdd76
+0	974	7230454939855904	CMakeFiles/caso_final_integrador_2.dir/labmain.cpp.obj	9994bce348449865
+975	1495	7230454944983617	caso_final_integrador_2.exe	f083893a35a8ed1
+5	889	7230457629862457	CMakeFiles/caso_final_integrador_2.dir/labmain.cpp.obj	9994bce348449865
+890	1332	7230457634210547	caso_final_integrador_2.exe	f083893a35a8ed1

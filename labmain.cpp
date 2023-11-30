@@ -1,3 +1,4 @@
+// Path: labmain.cpp
 #include<iostream>
 #include<string>
 #include<cstdio>
@@ -50,5 +51,18 @@ void load_script(const char* filename, bool show_script =false)
         console_box->new_text();
         console_box->set_text(error);
     }
+    void load_script();
+    {
+        char filename[256];
+        printf("Archivo: ");
+        scanf("%499s", filename);
+        ::load_script(filename, true);
+    }
         return;
+}
+
+int main()
+{
+    load_script("script.txt");
+    return 0;
 }
