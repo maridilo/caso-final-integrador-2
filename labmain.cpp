@@ -42,6 +42,7 @@ void load_script(const char* filename, bool show_script =false)
             console_box->set_text(script);
         }
     }
+
     catch (const char *error)
     {
         if (f)
@@ -58,7 +59,7 @@ void load_script(const char* filename, bool show_script =false)
         scanf("%499s", filename);
         ::load_script(filename, true);
     }
-        return;
+return;
 }
 
 int main()
