@@ -13,5 +13,15 @@ struct ColorConsole
 struct ConsoleBox
 {
     void new_text() {/*...*/}
-    void set_text
+    void set_text(const string &text) { cout << text << endl; }
 };
+
+ConsoleBox *console_box = new ConsoleBox;  // suponemos que ya se ha incicializado
+
+void load_script(const char* filename, bool show_script =false)
+{
+    f = fopen(filename, "rb");
+    if (!f)
+    {
+        return;
+}
